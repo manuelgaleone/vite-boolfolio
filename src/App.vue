@@ -40,9 +40,9 @@ export default {
     <div class="main_content_wrapper">
         <div class="main_content_elements">
             <div class="container">
-                <div class="row">
-                    <div class="col-4 p-0 m-0" v-for="project in projects.data">
-                        <div class="card">
+                <div class="row m-0 justify-content-center">
+                    <div class="col-3 card m-2 p-0" v-for="project in projects.data">
+                        <div class="card_elements">
                             <img class="card-img-top" :src="imageConverter(project.image)" alt="{{ project.title }}">
                             <div class="card-body">
                                 <h5 class="card-title">{{ project.title }}</h5>
