@@ -41,9 +41,24 @@ export default {
         <div class="card_elements">
             <img class="card-img-top" :src="imageConverter(project.image)" alt="{{ project.title }}">
             <div class="card-body text-center">
-                <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text">{{ project.content }}</p>
-                <a href="#">Scopri di più!</a>
+                <h5 class="card-title">
+                    <strong>{{ project.title }}</strong>
+                </h5>
+                <p class="card-text">
+                    {{ project.content }}
+                </p>
+                <h6 v-if="project.category.name">
+                    Category: {{ project.category.name }}
+                </h6>
+                <h6 v-else>
+                    Nessuna categoria.
+                </h6>
+                <h6 v-if="project.technologies.name">
+                    Tecnologie: {{ project.technologies.name }}
+                </h6>
+                <h6 v-else>
+                    Nessuna tecnologia.
+                </h6>
             </div>
         </div>
     </div>
