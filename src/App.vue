@@ -1,59 +1,30 @@
 <script>
-import axios from 'axios';
+import HeaderContent from './components/HeaderContent.vue';
+import FooterContent from './components/FooterContent.vue';
+import ProjectCard from './components/ProjectCard.vue';
 
 export default {
-    data() {
-        return {
-            api_url : 'http://127.0.0.1:8000',
-            projects: {},
-            error: "",
-        }
-    },
-    methods : {
-        getProjects(url) {
-            axios.get(url)
-            .then(response => {
-                console.log(response.data);
-                this.projects = response.data;
-            })
-            .catch(error => {
-                console.error(error)
-                this.error = error.message
-            })
-        },
-        imageConverter(way) {
-        console.log(way);
-        if (way) {
-            return this.api_url + '/storage/' + way
-        }
-        return 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Immagine_non_disponibile.JPG'
-        }
-    },
-    mounted() {
-    this.getProjects(this.api_url + '/api/projects');
-  }
+    components: {
+    ProjectCard,
+    HeaderContent,
+    FooterContent
+}
 }
 
 </script>
 
 <template>
+    <HeaderContent></HeaderContent>
     <div class="main_content_wrapper">
         <div class="main_content_elements">
             <div class="container">
-                <div class="row m-0 justify-content-center">
-                    <div class="col-3 card m-2 p-0" v-for="project in projects.data">
-                        <div class="card_elements">
-                            <img class="card-img-top" :src="imageConverter(project.image)" alt="{{ project.title }}">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ project.title }}</h5>
-                                <p class="card-text">{{ project.content }}</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row m-0 justify-content-center p-4">
+                    <ProjectCard></ProjectCard>
                 </div>
             </div>
         </div>
     </div>
+    <FooterContent></FooterContent>
 </template>
 
 <style lang="scss">
