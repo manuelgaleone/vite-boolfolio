@@ -20,6 +20,13 @@ export default {
                 console.error(error)
                 this.error = error.message
             })
+        },
+        imageConverter(way) {
+        console.log(way);
+        if (way) {
+            return this.api_url + '/storage/' + way
+        }
+        return 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Immagine_non_disponibile.JPG'
         }
     },
     mounted() {
@@ -34,14 +41,13 @@ export default {
         <div class="main_content_elements">
             <div class="container">
                 <div class="row">
-                    <div class="col-4" v-for="project in projects.data">
-                        <div class="card-body text-center">
-                            <h4>
-                                {{ project.title }}
-                            </h4>
-                            <p>
-                                {{ project.body }}
-                            </p>
+                    <div class="col-4 p-0 m-0" v-for="project in projects.data">
+                        <div class="card">
+                            <img class="card-img-top" :src="imageConverter(project.image)" alt="{{ project.title }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ project.title }}</h5>
+                                <p class="card-text">{{ project.content }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
