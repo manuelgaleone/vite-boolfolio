@@ -7,7 +7,8 @@ export default {
         return {
             api_url: "http://127.0.0.1:8000",
             projects: {},
-            error: ""
+            error: "",
+            loading: true
         }
     },
     methods: {
@@ -28,6 +29,7 @@ export default {
         .then(response => {
             if(response.data.success) {
                 this.projects = response.data;
+                this.loading = false;
             } else {
                 
             }
@@ -42,13 +44,16 @@ export default {
 <div class="single_project_wrapper">
     <div class="single_project_elements py-4">
         <div class="container">
-            <div class="single_project" v-if="projects">
-                <h1>
-                    {{ projects.title }}
-                </h1>
-                <p>
-                    {{ projects.content }}
-                </p>
+            <div class="single_project text-center" v-if="!loading">
+                <img class="project_image" :src="api_url + '/storage/' + projects.data.image" :alt="projects.data.title">
+                <div class="project_contents py-4 text-center">
+                    <h1>
+                        {{ projects.data.title }}
+                    </h1>
+                    <p>
+                        {{ projects.data.content }}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -56,4 +61,5 @@ export default {
 </template>
 
 <style lang="scss">
+
 </style>

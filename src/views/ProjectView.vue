@@ -8,6 +8,7 @@ export default {
             api_url: "http://127.0.0.1:8000",
             projects: {},
             error: "",
+            loading: true
         };
     },
     methods: {
@@ -16,6 +17,7 @@ export default {
                 .then(response => {
                 console.log(response.data);
                 this.projects = response.data;
+                this.loading = false;
             })
                 .catch(error => {
                 console.error(error);
@@ -49,7 +51,7 @@ export default {
     <div class="project_cards_elements">
         <div class="container">
             <div class="row m-0 justify-content-center p-4">
-                <div class="col-3 card m-2 p-0" v-for="project in projects.data">
+                <div class="col-3 card m-2 p-0" v-for="project in projects.data" v-if="!loading">
                     <div class="card_elements">
                         <img class="card-img-top" :src="imageConverter(project.image)" alt="{{ project.title }}">
                         <div class="card-body text-center">
@@ -71,7 +73,7 @@ export default {
                             <h6 v-else>
                                 Nessuna tecnologia.
                             </h6>
-                            <router-link class="text-primary" :to="{ name: 'single-project', params: { slug: project.slug } }"></router-link>
+                            <router-link class="text-primary" :to="{ name: 'single-project', params: { slug: project.slug } }">Scopri di più</router-link>
                         </div>
                     </div>
                 </div>
