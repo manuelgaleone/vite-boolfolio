@@ -14,15 +14,6 @@ export default {
     </footer>
 </template>
 
-<style lang="scss
+<style lang="scss">
 
-">
-.menu_element {
-    list-style-type: none;
-}
-
-.menu_item {
-    color: black;
-    text-decoration: none;
-}
 </style>
