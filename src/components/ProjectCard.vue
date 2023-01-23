@@ -42,9 +42,9 @@ export default {
         <div class="container">
             <div class="row m-0 justify-content-center p-4">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3 m-2 p-0" v-for="project in projects.data">
-                    <div class="card_elements card">
-                        <img class="card-img-top" :src="imageConverter(project.image)" alt="{{ project.title }}">
-                        <div class="card-body text-center">
+                    <div class="card_minimal_wrapper">
+                        <img :src="imageConverter(project.image)" alt="{{ project.title }}">
+                        <div class="card_minimal_elements d-flex justify-content-center flex-column text-white">
                             <h5 class="card-title">
                                 <strong>{{ project.title }}</strong>
                             </h5>
@@ -73,4 +73,7 @@ export default {
 </template>
 
 <style lang="scss">
+.card_minimal_wrapper {
+    position: relative;
+}
 </style>
