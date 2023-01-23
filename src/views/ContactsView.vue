@@ -6,38 +6,47 @@ export default {
 
 <template>
 <div class="contacts_wrapper vh-100 d-flex justify-content-center flex-column">
-    <div class="contacts_elements">
+    <div class="home_wrapper">
+        <div class="home_elements">
+            <div class="container">
+                <div class="home_titles p-3 d-flex justify-content-center flex-column">
+                    <h1 class="home_title text-center m-0">
+                        Rimaniamo <span class="fancy">Contatto</span>!
+                    </h1>
+                    <p class="home_subtitle mb-0 mt-3 text-center">
+                        Contattami dal Form <strong>sottostante</strong>.
+                    </p>
+                </div>
+                <div class="contacts_elements">
         <!-- Wrapper container -->
-        <div class="container py-4">
-
-            <!-- Bootstrap 5 starter form -->
+        <div class="container">
             <form id="contactForm">
-
-            <!-- Name input -->
-            <div class="mb-3">
-                <label class="form-label" for="name">Name</label>
-                <input class="form-control" id="name" type="text" placeholder="Name" />
-            </div>
-
-            <!-- Email address input -->
-            <div class="mb-3">
-                <label class="form-label" for="emailAddress">Email Address</label>
-                <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" />
-            </div>
-
-            <!-- Message input -->
-            <div class="mb-3">
-                <label class="form-label" for="message">Message</label>
-                <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
-            </div>
-
-            <!-- Form submit button -->
-            <div class="d-grid">
-                <button class="btn btn-primary btn-lg" type="submit">Submit</button>
-            </div>
+                <!-- Name input -->
+                <div class="mb-3">
+                    <label class="form-label" for="name">Nome</label>
+                    <input class="form-control" id="name" type="text" placeholder="Paolo? O meglio Giovanni?" />
+                </div>
+                <!-- Email address input -->
+                <div class="mb-3">
+                    <label class="form-label" for="emailAddress">EMail</label>
+                    <input class="form-control" id="emailAddress" type="email" placeholder="nome@mail.com" />
+                </div>
+                <!-- Message input -->
+                <div class="mb-3">
+                    <label class="form-label" for="message">Di cos'hai bisogno?</label>
+                    <textarea class="form-control" id="message" type="text" placeholder="Raccontami qualcosa" style="height: 10rem;"></textarea>
+                </div>
+                <!-- Form submit button -->
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-lg" type="submit">Invia</button>
+                </div>
             </form>
         </div>
     </div>
+            </div>
+        </div>
+    </div>
+    
 </div>
 </template>
 

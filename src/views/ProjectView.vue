@@ -47,36 +47,30 @@ export default {
 </script>
 
 <template>
-<div class="project_cards_wrapper">
-    <div class="project_cards_elements">
-        <div class="container p-5">
-            <div class="row justify-content-around">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3 m-0 p-0 p-2" v-for="project in projects.data">
-                    <div class="card_minimal_wrapper">
-                        <img class="card_minimal_image" :src="imageConverter(project.image)" alt="{{ project.title }}">
-                        <div class="card_minimal_elements d-flex justify-content-center flex-column text-white">
-                            <h5 class="card_title">
-                                <strong>{{ project.title }}</strong>
-                            </h5>
-                            <p class="card_text">
-                                {{ maxText(project.content) }}
-                            </p>
-                            <h6 class="card_category" v-if="project.category.name">
-                                Category: {{ project.category.name }}
-                            </h6>
-                            <h6 class="card_category" v-else>
-                                Nessuna categoria.
-                            </h6>
-                            <h6 class="card_technology" v-if="project.technologies.name">
-                                Tecnologie: {{ project.technologies.name }}
-                            </h6>
-                            <h6 class="card_technology" v-else>
-                                Nessuna tecnologia.
-                            </h6>
-                            <router-link class="card_cta" :to="{ name: 'single-project', params: { slug: project.slug } }">Scopri di più</router-link>
-                        </div>
-                    </div>
-                </div>
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3 m-0 p-0 p-2" v-for="project in projects.data">
+        <div class="card_minimal_wrapper">
+            <img class="card_minimal_image" :src="imageConverter(project.image)" alt="{{ project.title }}">
+            <div class="card_minimal_elements d-flex justify-content-center flex-column text-white p-2">
+                <h5 class="card_title text-dark">
+                    <strong>{{ project.title }}</strong>
+                </h5>
+                <p class="card_text text-dark">
+                    {{ maxText(project.content) }}
+                </p>
+                <h6 class="card_category text-dark" v-if="project.category.name">
+                    Category: <strong>{{ project.category.name }}</strong>
+                </h6>
+                <h6 class="card_category text-dark" v-else>
+                    Nessuna categoria.
+                </h6>
+                <h6 class="card_technology text-dark" v-if="project.technologies.length > 0" v-for="technology in project.technologies">
+                    Tecnologie: <strong>{{ technology.name }}</strong>
+                </h6>
+                <h6 class="card_technology text-dark" v-else>
+                    Nessuna tecnologia.
+                </h6>
+                <router-link class="card_cta text-dark" :to="{ name: 'single-project', params: { slug: project.slug } }">Scopri di più</router-link>
             </div>
         </div>
     </div>
@@ -103,7 +97,7 @@ export default {
 .card_minimal_wrapper:hover {
     .card_minimal_elements {
         opacity: 1;
-        background-color: rgba(0, 0, 0, 0.253);
+        background-color: rgb(255, 208, 0);
         transition: 0.4s;
         cursor: pointer;
     }
@@ -133,12 +127,12 @@ export default {
 
 .card_cta {
     font-size: 15px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .card_cta:hover {
     text-decoration: line-through;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 600;
 }
 </style>

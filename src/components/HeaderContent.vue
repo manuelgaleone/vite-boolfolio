@@ -9,21 +9,18 @@ export default {
     <div class="main_header_elements p-3">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-12 text-center">
-                    <h3 class="m-0 inconsolata logo_header text-white">
-                        Manuel Galeone
-                    </h3>
+                <div class="col-12">
+                    <h5 class="text-center text-white">
+                        Manuel &hearts;
+                    </h5>
                 </div>
-                <div class="col-12 d-flex justify-content-center mt-3">
-                    <ul class="menu_list d-flex m-0 p-0">
-                        <li class="menu_element inconsolata">
-                            <router-link class="menu_item  text-white" :to="{ name: 'home'}">Home</router-link>
+                <div class="col-12 d-flex justify-content-center">
+                    <ul class="menu_list d-flex m-0 mt-3 p-0">
+                        <li class="menu_element">
+                            <router-link class="menu_item text-white" :to="{ name: 'home'}">Home</router-link>
                         </li>
-                        <li class="menu_element inconsolata">
-                            <router-link class="menu_item text-white px-3" :to="{ name: 'projects'}">Projects</router-link>
-                        </li>
-                        <li class="menu_element inconsolata">
-                            <router-link class="menu_item  text-white" :to="{ name: 'contacts'}">Contacts</router-link>
+                        <li class="menu_element">
+                            <router-link class="menu_item text-white px-3" :to="{ name: 'contacts'}">Contacts</router-link>
                         </li>
                     </ul>
                 </div>
@@ -41,6 +38,7 @@ export default {
 .menu_item {
     color: black;
     text-decoration: none;
+    font-weight: 800;
 }
 
 .logo_header {

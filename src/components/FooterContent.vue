@@ -5,17 +5,19 @@ export default {
 </script>
 
 <template>
-<div class="main_footer_wrapper bg-dark">
-    <div class="main_footer_elements">
-        <p class="text-white text-center p-0 m-0">
-            Copyright &copy; Manuel Galeone
-        </p>
+<footer class="main_footer_wrapper bg-dark">
+    <div class="main_footer_elements p-3">
+        <div class="container">
+            <p class="text-white copyright text-center p-0 m-0">
+                Copyright &copy; Manuel Galeone
+            </p>
+        </div>
     </div>
-</div>
+</footer>
 </template>
 
 <style lang="scss">
-.main_footer_wrapper {
-    padding: 25px;
+.copyright {
+    font-weight: 700;
 }
 </style>
