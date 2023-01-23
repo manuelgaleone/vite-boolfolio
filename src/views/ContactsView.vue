@@ -5,15 +5,7 @@ export default {
 </script>
 
 <template>
-<div class="jumbotron_wrapper">
-    <div class="jumbotron bg-light jumbotron_elements py-4">
-        <div class="container">
-            <h1 class="display-4">Contattami</h1>
-            <p class="lead">Questo è il mio Modulo.</p>
-        </div>
-    </div>
-</div>
-<div class="contacts_wrapper">
+<div class="contacts_wrapper vh-100 d-flex justify-content-center flex-column">
     <div class="contacts_elements">
         <!-- Wrapper container -->
         <div class="container py-4">

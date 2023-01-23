@@ -5,25 +5,25 @@ export default {
 </script>
 
 <template>
-<header class="main_header_wrapper">
-    <div class="main_header_elements p-4">
+<header class="main_header_wrapper bg-dark">
+    <div class="main_header_elements p-3">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-6">
-                    <h3 class="m-0">
-                        Boolfolio
+                <div class="col-12 text-center">
+                    <h3 class="m-0 inconsolata logo_header text-white">
+                        Manuel Galeone
                     </h3>
                 </div>
-                <div class="col-6 d-flex jusatify-content-end p-0">
-                    <ul class="menu_list d-flex m-0">
-                        <li class="menu_element">
-                            <router-link class="menu_item" :to="{ name: 'home'}">Home</router-link>
+                <div class="col-12 d-flex justify-content-center mt-3">
+                    <ul class="menu_list d-flex m-0 p-0">
+                        <li class="menu_element inconsolata">
+                            <router-link class="menu_item  text-white" :to="{ name: 'home'}">Home</router-link>
                         </li>
-                        <li class="menu_element">
-                            <router-link class="menu_item px-3" :to="{ name: 'projects'}">Projects</router-link>
+                        <li class="menu_element inconsolata">
+                            <router-link class="menu_item text-white px-3" :to="{ name: 'projects'}">Projects</router-link>
                         </li>
-                        <li class="menu_element">
-                            <router-link class="menu_item" :to="{ name: 'contacts'}">Contacts</router-link>
+                        <li class="menu_element inconsolata">
+                            <router-link class="menu_item  text-white" :to="{ name: 'contacts'}">Contacts</router-link>
                         </li>
                     </ul>
                 </div>
@@ -41,5 +41,13 @@ export default {
 .menu_item {
     color: black;
     text-decoration: none;
+}
+
+.logo_header {
+    font-weight: 800;
+}
+
+.main_header_wrapper {
+    background-color: transparent;
 }
 </style>

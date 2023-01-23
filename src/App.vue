@@ -1,7 +1,7 @@
 <script>
 import HeaderContent from './components/HeaderContent.vue';
-import FooterContent from './components/FooterContent.vue';
 import ProjectCard from './components/ProjectCard.vue';
+import FooterContent from './components/FooterContent.vue';
 
 export default {
     components: {
