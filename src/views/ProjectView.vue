@@ -67,8 +67,8 @@ export default {
                             <h6 v-else>
                                 Nessuna categoria.
                             </h6>
-                            <h6 v-if="project.technologies.name">
-                                Tecnologie: {{ project.technologies.name }}
+                            <h6 class="technologies" v-if="project.technologies.length > 0" v-for="technology in project.technologies">
+                                Tecnologie: {{ technology.name }}
                             </h6>
                             <h6 v-else>
                                 Nessuna tecnologia.

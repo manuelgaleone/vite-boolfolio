@@ -1,1 +1,12 @@
 @import "/node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600;800;900&display=swap');
+
+.inconsolata {
+    font-family: 'Inconsolata', monospace;
+}
+
+@media screen and (min-width:768px) and (max-width:575px) {
+    .jumbo_title {
+        font-size: 30px;
+    }
+}

@@ -14,7 +14,7 @@ export default {
                         Boolfolio
                     </h3>
                 </div>
-                <div class="col-6 d-flex justify-content-end p-0">
+                <div class="col-6 d-flex jusatify-content-end p-0">
                     <ul class="menu_list d-flex m-0">
                         <li class="menu_element">
                             <router-link class="menu_item" :to="{ name: 'home'}">Home</router-link>
