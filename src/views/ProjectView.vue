@@ -51,7 +51,7 @@ export default {
     <div class="project_cards_elements">
         <div class="container">
             <div class="row m-0 justify-content-center p-4">
-                <div class="col-3 card m-2 p-0" v-for="project in projects.data" v-if="!loading">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 card m-2 p-0" v-for="project in projects.data" v-if="!loading">
                     <div class="card_elements">
                         <img class="card-img-top" :src="imageConverter(project.image)" alt="{{ project.title }}">
                         <div class="card-body text-center">

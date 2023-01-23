@@ -10,12 +10,12 @@ export default {
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-6">
-                    <h3>
+                    <h3 class="m-0">
                         Boolfolio
                     </h3>
                 </div>
                 <div class="col-6 d-flex justify-content-end p-0">
-                    <ul class="menu_list d-flex">
+                    <ul class="menu_list d-flex m-0">
                         <li class="menu_element">
                             <router-link class="menu_item" :to="{ name: 'home'}">Home</router-link>
                         </li>
