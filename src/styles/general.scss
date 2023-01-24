@@ -5,6 +5,10 @@ body {
     background-color: #222831;
 }
 
+input {
+    border: none;
+}
+
 .fancy {
     @supports (background-clip: text) or (-webkit-background-clip: text) {
       background-image: 
