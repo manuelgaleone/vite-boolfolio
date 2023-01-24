@@ -52,7 +52,7 @@ export default {
         <div class="container">
             <div class="row justify-content-around">
                 <div class="titles mb-5">
-                    <h1 class="jumbo_title m-0 text-center">
+                    <h1 class="jumbo_title m-0 text-center text-white">
                         Alcuni bei <span class="fancy">Progetti</span>
                     </h1>
                 </div>

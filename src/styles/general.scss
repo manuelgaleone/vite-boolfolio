@@ -1,6 +1,10 @@
 @import "/node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+body {
+    background-color: #222831;
+}
+
 .fancy {
     @supports (background-clip: text) or (-webkit-background-clip: text) {
       background-image: 
@@ -15,22 +19,40 @@
 
 .cta_button_img_text {
     display: inline-block;
-    background-color: black;
+    background-color: #FED049;
     text-decoration: none;
     padding: 15px;
-    color: white;
+    color: black;
     width: 150px;
     text-align: center;
 }
 
 .cta_button_img_text:hover {
-    color: black;
+    color: white;
     background-color: #FED049;
+}
+
+.ml-15 {
+    margin-left: 15px;
 }
 
 @media screen and (max-width:768px){
     .jumbo_titles {
         padding: 25px;
+    }
+
+    .jumbotron_home {
+        padding-top: 75px;
+    }
+
+    .jumbo_title {
+        font-weight: 900;
+        font-size: 55px;
+    }
+
+    .img_text_title {
+        font-weight: 900;
+        font-size: 55px;
     }
 }
 
@@ -41,6 +63,25 @@
 
     .jumbo_right {
         height: 250px;
+    }
+
+    .jumbotron_home {
+        padding-top: 75px;
+    }
+
+    .jumbo_title {
+        font-weight: 900;
+        font-size: 55px;
+    }
+
+    .img_text_title {
+        font-weight: 900;
+        font-size: 55px;
+    }
+    
+    .img_text_element {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 

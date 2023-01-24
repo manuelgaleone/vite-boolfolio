@@ -26,15 +26,17 @@ export default {
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 p-0 mt-2">
                     <div class="img_text_left d-flex justify-content-center flex-column py-5">
-                        <h1 class="img_text_title m-0">
-                            Un creativo
+                        <h1 class="img_text_title text-white text-sm-center text-md-center text-lg-left text-xl-left text-xxl-left m-0">
+                            Un <span class="fancy">Creativo</span>
                         </h1>
-                        <p class="img_text_subtitle mb-0 mt-3">
+                        <p class="img_text_subtitle text-white text-sm-center text-md-center text-lg-left text-xl-left text-xxl-left text-mb-0 mt-3">
                             Mi diletto in tante, <strong>troppe cose</strong>.<br>
                             Comunemente sono un <strong>Full Stack Developer</strong>
                             e so fare anche il <strong>caffè</strong>!
                         </p>
-                        <a class="cta_button_img_text mt-3" href="http://localhost:5174/contacts">CONTATTAMI</a>
+                        <div class="cta_button_wrapper d-flex justify-content-center">
+                            <a class="cta_button_img_text mt-3" href="http://localhost:5174/contacts">CONTATTAMI</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 p-0 mt-2">
@@ -55,14 +57,19 @@ export default {
 
 <style lang="scss">
 .jumbotron_home {
-	background-color: #222831;
-    padding: 150px;
+    padding-top: 75px;
+    padding-bottom: 50px;
 }
 
 .jumbo_title {
     font-weight: 900;
     font-size: 75px;
 }
+
+.img_text_element {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
 
 .img_text_title {
     font-weight: 900;
