@@ -1,6 +1,32 @@
 @import "/node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+.fancy {
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+      background-image: 
+        url("https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-2826.jpg?w=2000");
+      background-size: 110% auto;
+      background-position: center;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
+.cta_button_img_text {
+    display: inline-block;
+    background-color: black;
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    width: 150px;
+    text-align: center;
+}
+
+.cta_button_img_text:hover {
+    color: black;
+    background-color: #FED049;
+}
 
 @media screen and (max-width:768px){
     .jumbo_titles {

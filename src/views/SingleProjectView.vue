@@ -43,13 +43,19 @@ export default {
 <template>
 <div class="single_project_wrapper vh-100 d-flex justify-content-center flex-column">
     <div class="single_project_elements py-4">
+        <div class="jumbotron_wrapper">
+                <div class="jumbotron_elements">
+                    <div class="jumbotron_home">
+                        <h1 class="jumbo_title m-0 text-center text-white">
+                            {{ projects.title }}
+                        </h1>
+                    </div>
+                </div>
+            </div>
         <div class="container">
-            <div class="single_project text-center" v-if="!loading">
-                <img class="project_image" :src="api_url + '/storage/' + projects.data.image" :alt="projects.data.title">
+            <div class="single_project text-center mt-5 mb-5" v-if="!loading">
+                <img class="project_image" :src="api_url + '/storage/' + projects.image" :alt="projects.data.title">
                 <div class="project_contents py-4 text-center">
-                    <h1 class="project_title">
-                        {{ projects.data.title }}
-                    </h1>
                     <p class="project_content">
                         {{ projects.data.content }}
                     </p>

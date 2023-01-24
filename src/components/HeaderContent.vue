@@ -5,22 +5,20 @@ export default {
 </script>
 
 <template>
-<header class="main_header_wrapper bg-dark">
+<header class="main_header_wrapper">
     <div class="main_header_elements p-3">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-12">
-                    <h5 class="text-center text-white">
-                        Manuel &hearts;
-                    </h5>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <img class="header_logo" src="../assets/imgs/identity_Tavola disegno 1 copia 3.png" alt="Brand Identity">
                 </div>
-                <div class="col-12 d-flex justify-content-center">
-                    <ul class="menu_list d-flex m-0 mt-3 p-0">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-end p-0 m-0">
+                    <ul class="menu_list d-flex m-0 p-0">
                         <li class="menu_element">
-                            <router-link class="menu_item text-white" :to="{ name: 'home'}">Home</router-link>
+                            <router-link class="menu_item" :to="{ name: 'home'}">Home</router-link>
                         </li>
                         <li class="menu_element">
-                            <router-link class="menu_item text-white px-3" :to="{ name: 'contacts'}">Contacts</router-link>
+                            <router-link class="menu_item px-3" :to="{ name: 'contacts'}">Contacts</router-link>
                         </li>
                     </ul>
                 </div>
@@ -31,6 +29,10 @@ export default {
 </template>
 
 <style lang="scss">
+.header_logo {
+    width:75px;
+}
+
 .menu_element {
     list-style-type: none;
 }
@@ -38,7 +40,7 @@ export default {
 .menu_item {
     color: black;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .logo_header {
