@@ -58,6 +58,10 @@ input {
         font-weight: 900;
         font-size: 55px;
     }
+
+    .project_image {
+        width: 300px;
+    }
 }
 
 @media screen and (max-width:992px){
@@ -87,6 +91,10 @@ input {
     .img_text_element {
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    .project_image {
+        width: 300px;
     }
 }
 
