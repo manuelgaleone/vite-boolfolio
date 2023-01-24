@@ -14,7 +14,7 @@ export default {
           >
             <img
               class="header_logo"
-              src="../assets/imgs/identity_Tavola disegno 1 copia 3.png"
+              src="../assets/imgs/identity_Tavola disegno 1 copia 4.png"
               alt="Brand Identity"
             />
           </div>
