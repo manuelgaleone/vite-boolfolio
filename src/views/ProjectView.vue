@@ -47,7 +47,7 @@ export default {
 </script>
 
 <template>
-<div class="row">
+<div class="row justify-content-center">
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3 m-0 p-0 p-2" v-for="project in projects.data">
         <div class="card_minimal_wrapper">
             <img class="card_minimal_image" :src="imageConverter(project.image)" alt="{{ project.title }}">
