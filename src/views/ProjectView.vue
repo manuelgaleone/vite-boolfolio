@@ -72,8 +72,8 @@ export default {
                             <h6 class="card_category text-dark" v-else>
                                 Nessuna categoria.
                             </h6>
-                            <h6 class="card_technology text-dark" v-if="project.technologies.length > 0" v-for="technology in project.technologies">
-                                Tecnologie: <strong>{{ technology.name }}</strong>
+                            <h6 class="card_technology text-dark" v-if="project.technologies.length > 0">
+                                Tecnologie: <strong v-for="technology in project.technologies">#{{ technology.name }}</strong>
                             </h6>
                             <h6 class="card_technology text-dark" v-else>
                                 Nessuna tecnologia.

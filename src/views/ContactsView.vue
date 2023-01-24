@@ -24,22 +24,19 @@ export default {
                         <form id="contactForm">
                             <!-- Name input -->
                             <div class="mb-3">
-                                <label class="form-label" for="name">Nome</label>
                                 <input class="form-control" id="name" type="text" placeholder="Paolo? O meglio Giovanni?" />
                             </div>
                             <!-- Email address input -->
                             <div class="mb-3">
-                                <label class="form-label" for="emailAddress">EMail</label>
-                                <input class="form-control" id="emailAddress" type="email" placeholder="nome@mail.com" />
+                                <input class="form-control" id="emailAddress" type="email" placeholder="Nome@mail.com" />
                             </div>
                             <!-- Message input -->
                             <div class="mb-3">
-                                <label class="form-label" for="message">Di cos'hai bisogno?</label>
-                                <textarea class="form-control" id="message" type="text" placeholder="Raccontami qualcosa" style="height: 10rem;"></textarea>
+                                <textarea class="form-control" id="message" type="text" placeholder="Raccontami qualcosa!" style="height: 10rem;"></textarea>
                             </div>
                             <!-- Form submit button -->
                             <div class="d-grid">
-                                <button class="btn btn-primary btn-lg" type="submit">Invia</button>
+                                <button class="btn btn-light btn-lg" type="submit"><span><i class="fa-solid fa-plane-departure"></i></span> Spedisci</button>
                             </div>
                         </form>
                     </div>
