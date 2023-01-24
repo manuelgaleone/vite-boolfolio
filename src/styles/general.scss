@@ -1,42 +1,88 @@
 @import "/node_modules/bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.inconsolata {
-    font-family: 'Inconsolata', monospace;
+body {
+    background-color: #222831;
 }
 
-.jumbotron_wrapper {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
+.fancy {
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+      background-image: 
+        url("https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-2826.jpg?w=2000");
+      background-size: 110% auto;
+      background-position: center;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
+.cta_button_img_text {
+    display: inline-block;
+    background-color: #FED049;
+    text-decoration: none;
+    padding: 15px;
+    color: black;
+    width: 150px;
+    text-align: center;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+.cta_button_img_text:hover {
+    color: white;
+    background-color: #FED049;
+}
+
+.ml-15 {
+    margin-left: 15px;
 }
 
 @media screen and (max-width:768px){
-    .jumbo_title {
-        padding-top: 100px;
+    .jumbo_titles {
+        padding: 25px;
     }
 
-    .jumbo_mockup {
-        width: 350px;
+    .jumbotron_home {
+        padding-top: 75px;
+    }
+
+    .jumbo_title {
+        font-weight: 900;
+        font-size: 55px;
+    }
+
+    .img_text_title {
+        font-weight: 900;
+        font-size: 55px;
     }
 }
 
 @media screen and (max-width:992px){
-    .jumbo_mockup {
-        width: 350px;
+    .jumbo_titles {
+        padding: 25px;
+    }
+
+    .jumbo_right {
+        height: 250px;
+    }
+
+    .jumbotron_home {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .jumbo_title {
+        font-weight: 900;
+        font-size: 55px;
+    }
+
+    .img_text_title {
+        font-weight: 900;
+        font-size: 55px;
+    }
+    
+    .img_text_element {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
